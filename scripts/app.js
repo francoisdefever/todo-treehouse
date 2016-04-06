@@ -11,6 +11,6 @@ angular.module("todoListApp", [])
     };
 
     $scope.helloWorld = function() {
-        console.log("This is not the maint ctrl!");
+        console.log("This is not the maint ctrl");
     };
 });
