@@ -11,7 +11,7 @@
 
     <div ng-controller="mainCtrl" class="list">
         <h1 ng-click="helloWorld()">My Todo's</h1>
-        <div ng-repeat="todo in todos" class="">
+        <div class="item" ng-class="{'editing-item': editing}" ng-repeat="todo in todos">
             <input ng-model="todo.competed" type="checkbox">
             <label ng-hide="editing" class="editing-label" ng-click="helloWorld()">
                 {{todo.name}}</label>
