@@ -13,4 +13,8 @@ angular.module("todoListApp", [])
     $scope.helloWorld = function() {
         console.log("This is not the maint ctrl");
     };
+})
+.controller('imASibling', function($scope) {
+    $scope.foobar = 1234;
+    //do other cool stuff!
 });
