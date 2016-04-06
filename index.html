@@ -14,7 +14,7 @@
         <input ng-model="todo.competed" type="checkbox">
         <label ng-hide="editing" class="editing-label" ng-click="helloWorld()">
             {{todo.name}}</label>
-        <input ng-model="todo.name" class="editig-label" type="text">
+        <input ng-show="editing" ng-model="todo.name" class="editig-label" type="text">
 
         <div class="actions">
             <a href="" ng-click=" editing = !editing">edit</a>
