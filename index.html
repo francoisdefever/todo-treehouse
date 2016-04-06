@@ -11,11 +11,11 @@
 
     <div ng-controller="mainCtrl" class="list">
         <h1 ng-click="helloWorld()">My Todo's</h1>
-        <div class="item" ng-class="{'editing-item': editing}" ng-repeat="todo in todos">
+        <div class="item" ng-class="{'editing-item': editing, 'edited': todo.edited}" ng-repeat="todo in todos">
             <input ng-model="todo.competed" type="checkbox">
             <label ng-hide="editing" class="editing-label" ng-click="helloWorld()">
                 {{todo.name}}</label>
-            <input ng-change="learningNgChange()" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editig-label" type="text">
+            <input ng-change="todo.edited = true" ng-blur="editing = false;" ng-show="editing" ng-model="todo.name" class="editig-label" type="text">
 
             <div class="actions">
                 <a href="" ng-click=" editing = !editing">edit</a>
