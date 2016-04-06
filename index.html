@@ -11,9 +11,9 @@
 
     <div ng-controller="mainCtrl" class="list">
         <h1 ng-click="helloWorld()">My Todo's</h1>
-        <input type="checkbox">
+        <input ng-model="todo.competed" type="checkbox">
         <label class="editing-label" ng-click="helloWorld()">A sample todo!</label>
-        <input class="editig-label" type="text">
+        <input ng-model="todo.name" class="editig-label" type="text">
 
         <div class="actions" ng-controller="coolCtrl">
             <a href="" ng-click="whoAmI()">edit</a>
