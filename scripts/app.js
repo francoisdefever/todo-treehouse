@@ -7,7 +7,10 @@ angular.module("todoListApp", [])
 
     $scope.helloWorld = dataService.helloWorld;
 
-    $scope.todos = dataService.getTodos;
+    dataService.getTodos(function(response) {
+        console.log(response.data);
+        $scope.todos = response.data;
+    });
 })
 
 .service('dataService', function($http) {
@@ -15,9 +18,8 @@ angular.module("todoListApp", [])
         console.log("This is the hello console service");
     };
 
-    this.getTodos = $http.get('mock/todos.json')
-    .then(function(response) {
-        console.log(response.data);
-        return response.data;
-    });
+    this.getTodos = function(callback) {
+    $http.get('mock/todos.json')
+    .then(callback);
+};
 });
