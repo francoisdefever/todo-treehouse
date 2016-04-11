@@ -1,8 +1,9 @@
 angular.module("todoListApp", [])
 
 .controller('mainCtrl', function($scope, dataService) {
-    $scope.learningNgChange = function() {
-        console.log("An input Changed");
+    $scope.addTodo = function() {
+        var todo = {name: "This is a new todo."};
+        $scope.todos.push(todo);
     };
 
     $scope.helloWorld = dataService.helloWorld;
