@@ -24,7 +24,12 @@ angular.module("todoListApp", [])
 };
 
     this.deleteTodo = function(todo){
-        console.log("The " + todo.name + " has been deleted!" );
-        //order logic
+        console.log("The " + todo.name + " has been deleted!");
+        //other logic
+    };
+
+    this.saveTodo = function(todo){
+        console.log("The " + todo.name + " has been saved!");
+        //other logic
     };
 });
