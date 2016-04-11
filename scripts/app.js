@@ -13,6 +13,7 @@ angular.module("todoListApp", [])
     });
     $scope.deleteTodo = function(todo, $index) {
         dataService.deleteTodo(todo);
+        $scope.todos.splice($index, 1);
     };
 })
 
