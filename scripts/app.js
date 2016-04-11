@@ -22,4 +22,9 @@ angular.module("todoListApp", [])
     $http.get('mock/todos.json')
     .then(callback);
 };
+
+    this.deleteTodo = function(todo){
+        console.log("The " + todo.name + " has been deleted!" );
+        //order logic
+    };
 });
